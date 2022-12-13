@@ -1,0 +1,155 @@
+.OuterDiv{
+    width: 97vw;
+    height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.FirstInnerDiv{
+    border: 2px solid rgb(230, 230, 230);
+    height: 60%;
+    width: 30vw;
+    padding: 40px 40px;
+    display:flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+.funDo{
+    font-size: 30px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    padding-left: 160px;
+    display: flex;
+    flex-direction: row;
+    margin-left: 10px;
+}
+.F{
+    color: #1a73e8;
+}
+.u{
+    color: red;
+}
+.n{
+    color: yellow;
+}
+.D{
+    color: #1a73e8;
+}
+.o{
+    color:green;
+}
+.oo{
+    color:red;
+}
+.myDiv{
+    margin: 10px;
+    padding: 0px,20px;
+}
+.heading{
+    padding-left: 130px;
+    
+}
+.para{
+    font-size: 25px;
+    padding-left: 185px;
+    
+}
+.Email{
+    width: 100%;
+    height: 60px;
+    padding-top: 10px; 
+    padding-bottom: 10px; 
+}
+
+.Password{
+    width: 100%;
+    height: 60px; 
+}
+
+.buttondiv{
+    padding-bottom: 15px; 
+    padding-top: 15px;
+}
+.divButton{
+    font-size: 16px;
+    font-style: normal;
+    border-radius: 4px;
+    color: #1a73e8;
+    display: inline-block;
+    font-weight: 500;
+    letter-spacing: .25px;
+    outline: 0;
+    position: relative;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: inherit;
+    padding:0px;
+    text-align: left;
+    border: 0;
+    :hover{
+        background-color:#f2f5f9;
+        border-radius: 4px;
+    }
+}
+.matButton{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 25px;
+    padding: 5px 0px;
+    padding-left: 0px;
+}
+.CreateAccount{
+    display: flex;
+    b{
+     padding: 12px 7px;
+    }
+     button{
+     margin: 0px;
+    }
+}
+.createAcc{
+    font-size: 16px;
+    font-style: normal;
+    margin-bottom: 16px;
+    padding-top: 5px;
+    border-radius: 4px;
+    color: #1a73e8;
+    display: inline-block;
+    font-weight: 500;
+    letter-spacing: .25px;
+    outline: 0;
+    position: relative;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: inherit;
+    padding: 0;
+    text-align: left;
+    border: 0;
+    :hover{
+        background-color:#f2f5f9;
+        border-radius: 4px;
+    }
+}
+.NextButton{
+    margin-left: 0px;
+    :hover {
+        background-color:#0248a5;
+        color: white;
+      }
+}
+.mat-raised-button{
+    background-color:#1a73e8;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 4px;
+    box-shadow: none;
+    cursor: pointer;
+    margin-left: 205px;
+    :hover {
+        background-color:#0248a5;
+        color: white;
+      }  
+}
