@@ -9,30 +9,27 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class ResetPasswordComponent implements OnInit {
 
-  loginForm !: FormGroup;
+  resetPasswordForm !: FormGroup;
     submitted = false;
 
     constructor(private formBuilder: FormBuilder) { }
 
     ngOnInit() {
-        this.loginForm = this.formBuilder.group({
+        this.resetPasswordForm = this.formBuilder.group({
             password: ['', [Validators.required, Validators.minLength(6)]],
             confirmPassword: ['', Validators.required],
         });
     }
 
     // convenience getter for easy access to form fields
-    get f() { return this.loginForm.controls; }
+    get f() { return this.resetPasswordForm.controls; }
 
     onSubmit() {
         this.submitted = true;
 
         // stop here if form is invalid
-        if (this.loginForm.invalid) {
+        if (this.resetPasswordForm.invalid) {
             return;
         }
-
-        // display form values on success
-        alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.loginForm.value, null, 4));
     }
 }
