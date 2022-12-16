@@ -25,4 +25,13 @@ export class UserService {
       };
     return this.httpService.postService("/users/login", data, false, header )
   }
+
+  forgetPassword(data:any){
+    let header = { 
+      headers: new HttpHeaders({
+          'Content-Type': 'application/json'
+        })
+      };
+  return this.httpService.postService("/users/forgotpassword", data, false,header )
+  }
 }
