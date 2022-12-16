@@ -16,4 +16,13 @@ export class UserService {
       };
   return this.httpService.postService("/users/Register", data, false, header )
   }
+
+  login(data: any){
+    let header = { 
+      headers: new HttpHeaders({
+          'Content-Type': 'application/json'
+        })
+      };
+    return this.httpService.postService("/users/login", data, false, header )
+  }
 }
