@@ -34,4 +34,13 @@ export class UserService {
       };
   return this.httpService.postService("/users/forgotpassword", data, false,header )
   }
+
+  resetPassword(data:any){
+    let header = { 
+      headers: new HttpHeaders({
+          'Content-Type': 'application/json',
+        })
+      };
+  return this.httpService.postService("resetPassword", data, false,header )
+  }
 }
