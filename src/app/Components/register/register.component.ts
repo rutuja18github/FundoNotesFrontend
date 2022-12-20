@@ -9,7 +9,7 @@ import { UserService } from 'src/app/services/userService/user.service';
 })
 export class RegisterComponent implements OnInit {
 
-  registerForm !: FormGroup;
+    registerForm !: FormGroup;
     submitted = false;
 
     constructor(private formBuilder: FormBuilder,private user: UserService) { }

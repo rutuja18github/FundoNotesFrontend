@@ -1,0 +1,31 @@
+<div class="createnotecontainer">
+
+    <div *ngIf="isShow">
+        <input matInput [(ngModel)]="title" class="title" placeholder="Title" >
+        <img class="pin" src="../../../assets/pin note.svg">
+    </div>
+
+    <div class="takeNotes" fxLayout="row" *ngIf="!isShow || isShow" (click)="Show()">
+        <div *ngIf="!isShow || isShow">
+            <input matInput  [(ngModel)]="description" class="note-field" type="text" placeholder="Take a note..." >
+        
+        </div>
+
+        <div *ngIf="!isShow" class="Icons">
+            <button mat-icon-button matTooltip="New list">
+                <img src="../../../assets/newList.svg">
+            </button>
+
+            <button mat-icon-button matTooltip=" New note with drawing"> <img
+                    src="../../../assets/drawList.svg"></button>
+            <button mat-icon-button matTooltip=" New note with image"> 
+                <img src="../../../assets/imgNote.svg"></button>
+        </div>
+    </div>
+    <div *ngIf="isShow" class="close">
+        <div>
+     <app-icon> </app-icon>
+        </div>
+        <button (click)="Close()" class="clozee">Close</button>
+    </div>
+</div>
