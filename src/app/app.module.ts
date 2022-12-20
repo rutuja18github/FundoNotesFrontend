@@ -23,6 +23,9 @@ import { CreateNoteComponent } from './Components/create-note/create-note.compon
 import { FormsModule } from '@angular/forms';
 import { IconComponent } from './Components/icon/icon.component'; 
 import { MatMenuModule} from '@angular/material/menu';
+import { GetAllNoteComponent } from './Components/get-all-note/get-all-note.component';
+import { MatCardModule } from '@angular/material/card';
+import { DisplayNoteComponent } from './Components/display-note/display-note.component';
 
 
 @NgModule({
@@ -34,7 +37,9 @@ import { MatMenuModule} from '@angular/material/menu';
     ForgotPasswordComponent,
     DashboardComponent,
     CreateNoteComponent,
-    IconComponent
+    IconComponent,
+    GetAllNoteComponent,
+    DisplayNoteComponent
   ],
   imports: [
     BrowserModule,
@@ -50,7 +55,8 @@ import { MatMenuModule} from '@angular/material/menu';
     MatIconModule,
     MatListModule,
     FormsModule,
-    MatMenuModule
+    MatMenuModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

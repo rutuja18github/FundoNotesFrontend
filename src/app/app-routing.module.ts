@@ -7,6 +7,7 @@ import {ResetPasswordComponent} from './Components/reset-password/reset-password
 import {DashboardComponent} from './Components/dashboard/dashboard.component';
 import {CreateNoteComponent} from './Components/create-note/create-note.component';
 import {IconComponent} from './Components/icon/icon.component';
+import { GetAllNoteComponent } from './Components/get-all-note/get-all-note.component';
 
 
 const routes: Routes = [
@@ -14,9 +15,12 @@ const routes: Routes = [
   {path:'login',component:LoginComponent},
   {path:'forgotPassword' ,component:ForgotPasswordComponent},
   {path:'resetPassword',component:ResetPasswordComponent},
-  {path:'dashboard',component:DashboardComponent},
-  {path:'createNote',component:CreateNoteComponent},
-  {path:'icon',component:IconComponent},
+  {path:'dashboard',component:DashboardComponent,
+  children:[
+    {path:'notes',component:GetAllNoteComponent}
+  ]   
+},
+  
   
 ];
 

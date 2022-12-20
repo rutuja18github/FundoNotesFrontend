@@ -1,0 +1,16 @@
+<div class="display">
+
+    <div class="notes" *ngFor="let data of noteList">
+        <div class="title">
+            <p>{{data.title}}</p>
+        </div>
+
+        <div class="description">
+            <p>{{data.description}}</p>
+        </div>
+
+        <div class="icon">
+            <app-icon [noteCard]="data"></app-icon>
+        </div>
+    </div>
+</div>
