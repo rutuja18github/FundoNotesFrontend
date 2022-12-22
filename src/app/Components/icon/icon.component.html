@@ -19,7 +19,7 @@
         <button  matTooltip="More" [matMenuTriggerFor]="menu">
             <img src="../../../assets/more_vert_FILL0_wght400_GRAD0_opsz.svg"></button>
             <mat-menu #menu="matMenu" class="notifications-dropdown">
-                <button mat-menu-item >Delete Note</button>
+                <button mat-menu-item (click)="trash()">Delete Note</button>
                 <button mat-menu-item>Add label</button>
                 <button mat-menu-item>Add drawing</button>
                 <button mat-menu-item>Make a copy</button>

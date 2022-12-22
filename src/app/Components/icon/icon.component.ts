@@ -6,22 +6,29 @@ import { NoteService } from 'src/app/services/noteService/note.service';
   templateUrl: './icon.component.html',
   styleUrls: ['./icon.component.scss']
 })
-export class IconComponent implements OnInit {
+export class IconComponent{
   @Input() noteCard: any;
   
   constructor(private note: NoteService) {
   }
-
-  ngOnInit(): void {
-
-  }
   archive() :void{
     let data = {
       id :this.noteCard._id,
-      isArchive : true,
+      isArchive : true
     }
     console.log(data);
     this.note.archiveNoteService(data).subscribe((response : any) => {
+      console.log(response);
+    })
+  }
+
+  trash(){
+    let data = {
+      id :this.noteCard._id,
+      isTrash : true
+    }
+    console.log(data);
+    this.note.trashNoteService(data).subscribe((response : any) => {
       console.log(response);
     })
   }
