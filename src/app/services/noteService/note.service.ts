@@ -31,4 +31,17 @@ export class NoteService {
     };
     return this.httpService.getService("/note/allNote" ,true, header)
   }
+
+  updateNote(data: any){
+    this.token= localStorage.getItem('token')
+    let header ={
+    headers: new HttpHeaders({
+      'Content-Type': 'application/json',
+       Authorization:'Bearer '+ this.token,
+    })
+  };
+  let noteId=data.id
+  console.log(data.id)
+  return this.httpService.putService(`/note/${noteId}`, data, true, header)
+  }
 }

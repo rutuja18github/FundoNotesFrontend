@@ -2,11 +2,11 @@
 
     <div class="notes" *ngFor="let data of noteList">
         <div class="title">
-            <p (click)="openDialog(notes)">{{data.title}}</p>
+            <p (click)="openDialog(data)">{{data.title}}</p>
         </div>
 
         <div class="description">
-            <p (click)="openDialog(notes)">{{data.description}}</p>
+            <p (click)="openDialog(data)">{{data.description}}</p>
         </div>
 
         <div class="icon">
