@@ -22,3 +22,8 @@
     margin-top: 24px;
     overflow: visible;
 }
+button:hover {
+    border : none;
+    background-color: grey;
+    cursor: pointer;
+}
