@@ -28,6 +28,7 @@ import { MatCardModule } from '@angular/material/card';
 import { DisplayNoteComponent } from './Components/display-note/display-note.component';
 import { UpdateNoteComponent } from './Components/update-note/update-note.component';
 import {MatDialogModule} from '@angular/material/dialog';
+import {MatTooltipModule} from '@angular/material/tooltip';
 
 
 @NgModule({
@@ -60,7 +61,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     FormsModule,
     MatMenuModule,
     MatCardModule,
-    MatDialogModule
+    MatDialogModule,
+    MatTooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent]
