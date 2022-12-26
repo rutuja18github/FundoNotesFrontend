@@ -29,6 +29,7 @@ import { DisplayNoteComponent } from './Components/display-note/display-note.com
 import { UpdateNoteComponent } from './Components/update-note/update-note.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatTooltipModule} from '@angular/material/tooltip';
+import { ArchiveNoteComponent } from './Components/archive-note/archive-note.component';
 
 
 @NgModule({
@@ -43,7 +44,8 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     IconComponent,
     GetAllNoteComponent,
     DisplayNoteComponent,
-    UpdateNoteComponent
+    UpdateNoteComponent,
+    ArchiveNoteComponent
   ],
   imports: [
     BrowserModule,
