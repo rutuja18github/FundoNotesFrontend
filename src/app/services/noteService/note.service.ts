@@ -52,7 +52,6 @@ export class NoteService {
     })
   };
   let noteId=data.id
-  console.log(data.id)
   return this.httpService.putService(`/note/${noteId}/archive`, data, true, header)
   }
   trashNoteService(data: any){
@@ -64,7 +63,6 @@ export class NoteService {
     })
   };
   let noteId=data.id
-  console.log(data.id)
   return this.httpService.putService(`/note/${noteId}/trash`, data, true, header)
   }
 }

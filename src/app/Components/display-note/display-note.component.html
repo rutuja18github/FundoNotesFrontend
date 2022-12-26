@@ -10,7 +10,7 @@
         </div>
 
         <div class="icon">
-            <app-icon [noteCard]="data"></app-icon>
+            <app-icon [noteCard]="data" (event)="receivedData($event)"></app-icon>
         </div>
     </div>
 </div>

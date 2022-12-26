@@ -1,4 +1,4 @@
-import {Component,OnInit,Input} from '@angular/core';
+import {Component,OnInit,Input,Output, EventEmitter} from '@angular/core';
 import {MatDialog} from '@angular/material/dialog';
 import {UpdateNoteComponent} from '../update-note/update-note.component';
 
@@ -9,6 +9,7 @@ import {UpdateNoteComponent} from '../update-note/update-note.component';
 })
 export class DisplayNoteComponent implements OnInit {
 @Input() noteList :any;
+@Output() displayNoteEvent = new EventEmitter<string>();
 title: any;
 description: any;
 notes:any;
@@ -26,10 +27,12 @@ constructor(public dialog: MatDialog) {}
       
     });
   }
+  receivedData(event: any) {
+    console.log(event);
+    this.displayNoteEvent.emit(event)
+  }
 
+ngOnInit() {} 
 
-ngOnInit() {
-  
-}
 
 }

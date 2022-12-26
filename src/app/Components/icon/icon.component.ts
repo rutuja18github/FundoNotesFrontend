@@ -1,4 +1,4 @@
-import { Component,OnInit, Input  } from '@angular/core';
+import { Component,OnInit, Input ,Output, EventEmitter } from '@angular/core';
 import { NoteService } from 'src/app/services/noteService/note.service';
 
 @Component({
@@ -8,7 +8,7 @@ import { NoteService } from 'src/app/services/noteService/note.service';
 })
 export class IconComponent{
   @Input() noteCard: any;
-  
+  @Output() event = new EventEmitter<string>();
   constructor(private note: NoteService) {
   }
   archive() :void{
@@ -19,6 +19,7 @@ export class IconComponent{
     console.log(data);
     this.note.archiveNoteService(data).subscribe((response : any) => {
       console.log(response);
+      this.event.emit(response);
     })
   }
 

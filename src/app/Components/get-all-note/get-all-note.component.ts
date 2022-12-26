@@ -21,4 +21,8 @@ export class GetAllNoteComponent implements OnInit {
      console.log(this.noteArray);
    })
  }
+ receivedData(event: any) {
+  console.log("refresh", event);
+  this.getAllNote();
+}
 }
