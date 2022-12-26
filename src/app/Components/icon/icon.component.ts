@@ -31,6 +31,7 @@ export class IconComponent{
     console.log(data);
     this.note.trashNoteService(data).subscribe((response : any) => {
       console.log(response);
+      this.event.emit(response);
     })
   }
 }
