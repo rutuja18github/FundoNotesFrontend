@@ -5,8 +5,8 @@
         <img class="pin" src="../../../assets/pin note.svg">
     </div>
 
-    <div class="takeNotes" fxLayout="row" *ngIf="!isShow || isShow" (click)="Show()">
-        <div *ngIf="!isShow || isShow">
+    <div class="takeNotes" *ngIf="!isShow || isShow" (click)="Show()">
+        <div>
             <input matInput  [(ngModel)]="description" class="note-field" type="text" placeholder="Take a note..." >
         
         </div>
