@@ -21,8 +21,5 @@ export class HttpService {
     return this.httpClient.put(this.baseUrl + url,requestData, token && httpOptions)
   }
 
-  deleteServive(){
-    
-  }
 
 }

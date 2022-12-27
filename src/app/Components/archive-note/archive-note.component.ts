@@ -17,13 +17,17 @@ export class ArchiveNoteComponent implements OnInit {
 
   getArchiveNote(){
     this.note.getAllNotes().subscribe((response : any) => {
-      console.log(response);
+      //console.log(response);
       this.noteArray=response.data
-      console.log(this.noteArray);
       this.noteArray=this.noteArray.filter((result:any)=>{
         return result.isArchive==true;
       })
+      console.log(this.noteArray);
     })
+  }
+
+  receivedData(event :any){
+    this.getArchiveNote();
   }
 
 }

@@ -1,11 +1,12 @@
-
-<div class="icon-container">
+<div class="icon-container" *ngIf="this.noteCard.isTrash==false">
     <div class="icon">
         <button matTooltip="Remind me"><img src="../../../assets/remind.svg"></button>
     </div>
+
     <div class="icon">
-        <button  matTooltip="Collaborator"><img src="../../../assets/person_add_FILL0_wght400_GRAD0_opsz48.svg"></button>
+        <button matTooltip="Collaborator"><img src="../../../assets/person_add_FILL0_wght400_GRAD0_opsz48.svg"></button>
     </div>
+
     <div class="icon">
         <button matTooltip="Background options" [matMenuTriggerFor]="color">
             <img src="../../../assets/palette_FILL0_wght400_GRAD0_opsz48.svg">
@@ -20,21 +21,25 @@
         </mat-menu>
     </div>
     <div class="icon">
-        <button  matTooltip="Add image"><img src="../../../assets/image_FILL0_wght400_GRAD0_opsz48.svg"></button>
+        <button matTooltip="Add image"><img src="../../../assets/image_FILL0_wght400_GRAD0_opsz48.svg"></button>
     </div>
-    <div class="icon">
+
+    <div class="icon" *ngIf="this.noteCard.isArchive==false">
         <button (click)="archive()" matTooltip="Archive"><img src="../../../assets/archive.svg"></button>
     </div>
+    <div class="icon" *ngIf="this.noteCard.isArchive==true">
+        <button (click)="Unarchive()" matTooltip="Unarchive"><img src="../../../assets/unarchive.svg"></button>
+    </div>
     <div class="icon">
-        <button  matTooltip="More" [matMenuTriggerFor]="menu">
+        <button matTooltip="More" [matMenuTriggerFor]="menu">
             <img src="../../../assets/more_vert_FILL0_wght400_GRAD0_opsz.svg"></button>
-            <mat-menu #menu="matMenu" class="notifications-dropdown">
-                <button mat-menu-item (click)="trash()">Delete Note</button>
-                <button mat-menu-item>Add label</button>
-                <button mat-menu-item>Add drawing</button>
-                <button mat-menu-item>Make a copy</button>
-                <button mat-menu-item>Show checkboxes</button>
-                <button mat-menu-item>Copy to Google Docs</button>
-            </mat-menu>
+        <mat-menu #menu="matMenu" class="notifications-dropdown">
+            <button mat-menu-item (click)="trash()">Delete Note</button>
+            <button mat-menu-item>Add label</button>
+            <button mat-menu-item>Add drawing</button>
+            <button mat-menu-item>Make a copy</button>
+            <button mat-menu-item>Show checkboxes</button>
+            <button mat-menu-item>Copy to Google Docs</button>
+        </mat-menu>
     </div>
 </div>

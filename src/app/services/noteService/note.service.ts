@@ -77,4 +77,6 @@ export class NoteService {
   let noteId=data.id
   return this.httpService.putService(`/note/${noteId}`, data, true, header)
   }
+
+
 }

@@ -61,5 +61,17 @@ export class IconComponent{
       this.event.emit(response);
     })
   }
+
+  Unarchive() :void{
+    let data = {
+      id :this.noteCard._id,
+      isArchive : false
+    }
+    console.log(data);
+    this.note.updateNote(data).subscribe((response : any) => {
+      console.log(response);
+      this.event.emit(response);
+    })
+  }
 }
 
