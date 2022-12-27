@@ -65,8 +65,7 @@ export class NoteService {
   let noteId=data.id
   return this.httpService.putService(`/note/${noteId}/trash`, data, true, header)
   }
-
-  colorService(data: any){
+  deleteNote(data: any){
     this.token= localStorage.getItem('token')
     let header ={
     headers: new HttpHeaders({
@@ -75,8 +74,6 @@ export class NoteService {
     })
   };
   let noteId=data.id
-  return this.httpService.putService(`/note/${noteId}`, data, true, header)
+  return this.httpService.deleteServive(`/note/${noteId}`, true, header)
   }
-
-
 }

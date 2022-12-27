@@ -56,7 +56,7 @@ export class IconComponent{
       color:this.noteCard.color
     }
     console.log(data);
-    this.note.colorService(data).subscribe((response : any) => {
+    this.note.updateNote(data).subscribe((response : any) => {
       console.log(response);
       this.event.emit(response);
     })
@@ -73,5 +73,26 @@ export class IconComponent{
       this.event.emit(response);
     })
   }
+
+  restore(){
+    let data = {
+      id :this.noteCard._id,
+      isTrash : false
+    }
+    this.note.updateNote(data).subscribe((response : any) => {
+      console.log(response);
+      this.event.emit(response);
+    })
+  }
+  
+  deleteForever(){
+    let data = {
+      id :this.noteCard._id
+    }
+    this.note.deleteNote(data).subscribe((response : any) => {
+      console.log(response);
+      this.event.emit(response);
+    })
+  } 
 }
 

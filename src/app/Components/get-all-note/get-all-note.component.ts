@@ -16,16 +16,14 @@ export class GetAllNoteComponent implements OnInit {
  }
  getAllNote(){
    this.note.getAllNotes().subscribe((response : any) => {
-     console.log(response);
      this.noteArray=response.data
-     console.log(this.noteArray);
      this.noteArray=this.noteArray.filter((result:any)=>{
       return result.isArchive==false && result.isTrash==false;
     })
+    console.log(this.noteArray);
    })
  }
  receivedData(event: any) {
-  console.log("refresh", event);
   this.getAllNote();
 }
 }

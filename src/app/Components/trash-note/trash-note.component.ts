@@ -16,13 +16,15 @@ export class TrashNoteComponent implements OnInit {
 
   trashNote(){
     this.note.getAllNotes().subscribe((response:any) =>{
-      console.log(response)
       this.noteArray=response.data
-      console.log(this.noteArray)
       this.noteArray=this.noteArray.filter((result :any) =>{
         return result.isTrash==true;
       })
+      console.log(this.noteArray)
     })
+  }
+  receivedData(event: any){
+      this.trashNote()
   }
 
 }

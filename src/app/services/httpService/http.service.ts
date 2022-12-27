@@ -21,5 +21,8 @@ export class HttpService {
     return this.httpClient.put(this.baseUrl + url,requestData, token && httpOptions)
   }
 
+  deleteServive(url: string, token: boolean = true, httpOptions: any = {}){
+    return this.httpClient.delete(this.baseUrl + url, token && httpOptions)
+  }
 
 }
