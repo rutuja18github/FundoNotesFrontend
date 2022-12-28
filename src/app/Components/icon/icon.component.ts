@@ -1,5 +1,9 @@
 import { Component,OnInit, Input ,Output, EventEmitter } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { NoteService } from 'src/app/services/noteService/note.service';
+import { ArchiveNoteComponent } from '../archive-note/archive-note.component';
+import { DisplayNoteComponent } from '../display-note/display-note.component';
+import { TrashNoteComponent } from '../trash-note/trash-note.component';
 
 @Component({
   selector: 'app-icon',
@@ -9,7 +13,10 @@ import { NoteService } from 'src/app/services/noteService/note.service';
 export class IconComponent{
   @Input() noteCard: any;
   @Output() event = new EventEmitter<string>();
-  constructor(private note: NoteService) {
+  isDisplayNoteComponent: boolean = false;
+  isTrashComponent: boolean = false;
+  isArchiveComponent: boolean = false;
+  constructor(private note: NoteService,private route:ActivatedRoute) {
   }
   colors = [
     { code: '#fff', name: 'white' },
@@ -25,6 +32,24 @@ export class IconComponent{
     { code: '#e6c9a8', name: 'brown' },
     { code: '#e8eaed', name: 'grey' },
   ];
+
+  ngOnInit(): void {
+    let comp = this.route.snapshot.component;
+    if (comp == DisplayNoteComponent) {
+      // this.isDisplayNoteComponent = true;
+    }
+
+    if (comp == TrashNoteComponent) {
+      this.isTrashComponent = true;
+      // console.log(this.isTrashComponent);
+    }
+    if (comp == ArchiveNoteComponent) {
+      this.isArchiveComponent = true;
+      // console.log(this.isArchiveComponent);
+    }
+  }
+
+
   archive() :void{
     let data = {
       id :this.noteCard._id,

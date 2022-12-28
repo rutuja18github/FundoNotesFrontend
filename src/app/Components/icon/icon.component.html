@@ -1,14 +1,14 @@
-<div class="icon-container" *ngIf="this.noteCard.isTrash==false">
-    <div class="icon">
-        <button matTooltip="Remind me"><img src="../../../assets/remind.svg"></button>
+<div class="icon-container" *ngIf="!isTrashComponent">
+    <div class="icon" >
+        <button mat-icon-button matTooltip="Remind me"><img src="../../../assets/remind.svg"></button>
     </div>
 
-    <div class="icon">
-        <button matTooltip="Collaborator"><img src="../../../assets/person_add_FILL0_wght400_GRAD0_opsz48.svg"></button>
+    <div class="icon" >
+        <button mat-icon-button matTooltip="Collaborator"><img src="../../../assets/person_add_FILL0_wght400_GRAD0_opsz48.svg"></button>
     </div>
 
-    <div class="icon">
-        <button matTooltip="Background options" [matMenuTriggerFor]="color">
+    <div class="icon" >
+        <button mat-icon-button matTooltip="Background options" [matMenuTriggerFor]="color">
             <img src="../../../assets/palette_FILL0_wght400_GRAD0_opsz48.svg">
         </button>
         <mat-menu #color="matMenu">
@@ -20,18 +20,18 @@
             </div>
         </mat-menu>
     </div>
-    <div class="icon">
-        <button matTooltip="Add image"><img src="../../../assets/image_FILL0_wght400_GRAD0_opsz48.svg"></button>
+    <div class="icon" >
+        <button mat-icon-button matTooltip="Add image"><img src="../../../assets/image_FILL0_wght400_GRAD0_opsz48.svg"></button>
     </div>
 
-    <div class="icon" *ngIf="this.noteCard.isArchive==false">
-        <button (click)="archive()" matTooltip="Archive"><img src="../../../assets/archive.svg"></button>
+    <div class="icon" *ngIf="!isArchiveComponent ">
+        <button mat-icon-button (click)="archive()" matTooltip="Archive"><img src="../../../assets/archive.svg"></button>
     </div>
-    <div class="icon" *ngIf="this.noteCard.isArchive==true">
-        <button (click)="Unarchive()" matTooltip="Unarchive"><img src="../../../assets/unarchive.svg"></button>
+    <div class="icon" *ngIf="isArchiveComponent ">
+        <button mat-icon-button (click)="Unarchive()" matTooltip="Unarchive"><img src="../../../assets/unarchive.svg"></button>
     </div>
-    <div class="icon">
-        <button matTooltip="More" [matMenuTriggerFor]="menu">
+    <div class="icon" >
+        <button mat-icon-button matTooltip="More" [matMenuTriggerFor]="menu">
             <img src="../../../assets/more_vert_FILL0_wght400_GRAD0_opsz.svg"></button>
         <mat-menu #menu="matMenu" class="notifications-dropdown">
             <button mat-menu-item (click)="trash()">Delete Note</button>
@@ -43,11 +43,11 @@
         </mat-menu>
     </div>
 </div>
-<div class="trash" *ngIf="this.noteCard.isTrash==true">
-    <div class="icon">
-        <button (click)="deleteForever()" matTooltip="Delete forever"><img src="../../../assets/DeleteForever.svg"></button>
+<div class="trash" *ngIf="isTrashComponent">
+    <div class="icon" >
+        <button mat-icon-button (click)="deleteForever()" matTooltip="Delete forever"><img src="../../../assets/DeleteForever.svg"></button>
     </div>
-    <div class="icon">
-        <button (click)="restore()" matTooltip="Restore"><img src="../../../assets/Restore.svg"></button>
+    <div class="icon" >
+        <button mat-icon-button (click)="restore()" matTooltip="Restore"><img src="../../../assets/Restore.svg"></button>
     </div>
 </div>
