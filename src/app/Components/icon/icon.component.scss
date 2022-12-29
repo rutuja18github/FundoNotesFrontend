@@ -6,7 +6,7 @@
     margin: 0px;
 }
 .icon button{
-    margin-right: 10px;
+    
     border: none;
     background-color: transparent;
     cursor: pointer;
@@ -42,13 +42,14 @@
 }
 button:hover {
     border : none;
-    background-color: rgb(192, 183, 183);
+    background-color: rgb(74, 74, 74);
     cursor: pointer;
+    
 }
 .trash{
     display: flex;
     flex-direction: row;
     justify-content:space-evenly;
     margin: 0px;
-    margin-right: 170px;
+    margin-right: 130px;
 }

@@ -1,6 +1,9 @@
 .OuterDiv{
-    width: 97vw;
-    height: 100vh;
+    max-width: 100%;
+    min-width: 20%;
+    min-height: 30%;
+    max-height: 100%;
+    height: 100%;
     display:flex;
     justify-content: center;
     align-items: center;
@@ -8,15 +11,19 @@
 .FirstInnerDiv{
     border: 2px solid rgb(230, 230, 230);
     height: 80%;
+    min-height: 30%;
+    max-width: 65%;
+    min-width: 10%;
     padding: 40px 40px;
     display:flex;
     flex-direction: column;
-    border-radius: 10px;
+    border: 1.5px solid rgb(228, 224, 224);
 }
 .InnerDiv{
     display:flex;
     flex-direction: row;
-    width: 100%;
+    max-width: 100%;
+    min-width: 10%;
 }
 .funDo{
     font-size: 30px;
@@ -46,46 +53,27 @@
 }
 .myDiv{
     margin: 10px;
-    padding: 0px,20px;
-}
-.imageDiv{
-    display:flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: flex-start;
-    width: 100%;
-    margin-top: 30px;
-    text-align: center;
-    font-size: 16px;
-    line-height: 20px;
-    
-    padding-left: 20px;
-    font-weight: 300;
-}
-.image{
-    width: 250px;
-    height: 250px;
+    width: auto;
+    //padding: 0px,20px
 }
 .nameDiv{
     display:flex;
     flex-direction: row;
 }
-.firstNameDiv{
+.name{
     margin-right: 10px;
-    width: 50%;
+    height: auto;
+    
 }
-.UserName{
+.namediv{
+    width:auto;
+    height: auto;
+}
+.username{
   width: 100%;
-  height: 60px; 
+  height: auto; 
 }
-.PasswordDiv{
-   height: 60px;
-   margin-right: 10px;
-   width: 50%;
-}
-.Confirm{
-    height: 60px;
-}
+
 .matButton{
     display: flex;
     flex-direction: row;
@@ -93,15 +81,6 @@
     margin-top: 25px;
     padding: 5px 0px;
     padding-left: 0px;
-}
-.loginButton{
-    display: flex;
-    b{
-     padding: 12px 7px;
-    }
-     button{
-     margin: 0px;
-    }
 }
 .login{
     font-size: 16px;
@@ -126,13 +105,6 @@
         border-radius: 4px;
     }
 }
-.NextButton{
-    margin-left: 205px;
-    :hover {
-        background-color:#0248a5;
-        color: white;
-      }
-}
 .mat-raised-button{
     background-color:#1a73e8;
     color: white;
@@ -140,7 +112,12 @@
     border: none;
     border-radius: 4px;
     box-shadow: none;
-    cursor: pointer;   
+    cursor: pointer;  
+    margin-left: auto; 
+    :hover {
+        background-color:#0248a5;
+        color: white;
+      }
 }
 .para{
     font-size: 12px;
@@ -170,8 +147,76 @@
         border-radius: 4px;
     }
 }
+
+.imageDiv{
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    max-width: 100%;
+    min-width: 20%;
+    margin-top: 30px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 20px;
+    padding-left: 20px;
+    //font-weight: 300;
+}
+
+.image{
+    width: 230px;
+    height: 230px;
+}
 .paradiv{
     display:flex;
     align-items: center;
     width: 70%;
+}
+@media only screen and (max-width :1120px){
+    .paradiv{
+       font-size: 10px;
+   }
+   .FirstInnerDiv{
+       height: auto;
+       width: auto;
+   }
+   .imageDiv{
+    width: auto;
+    height: auto;
+   }
+}
+@media only screen and (max-width :900px){
+    .imageDiv{
+        display: none;
+    }
+}
+@media only screen and (max-width :700px){
+    .nameDiv{
+        flex-direction: column;
+    }
+    .name{
+        width:100%;
+        margin-right: 0px;
+    }
+    .username{
+      width: 100%; 
+    }
+    .namediv{
+        width:100%
+    }
+    
+}
+@media only screen and (max-width :570px){
+    .NextButton{
+        margin-left: 110px;
+    }
+    .myDiv{
+        width: 100%;
+    }
+    .FirstInnerDiv{
+        border: 0px;
+    }
+    .loginButton{
+        width: auto;
+    }
 }

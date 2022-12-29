@@ -50,6 +50,7 @@ export class IconComponent{
   }
 
 
+
   archive() :void{
     let data = {
       id :this.noteCard._id,

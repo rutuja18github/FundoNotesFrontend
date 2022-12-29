@@ -15,56 +15,52 @@
             <h1>Create Your FunDoo Account</h1>
           </span>
           <div class="nameDiv">
-            <mat-form-field appearance="outline" class="firstNameDiv">
-              <mat-label>First name</mat-label>
-              <input matInput placeholder=""  formControlName="firstname" >
-              <mat-error>First name is required</mat-error>
-            </mat-form-field>
-            <mat-form-field appearance="outline">
-              <mat-label>Last name</mat-label>
-              <input matInput placeholder="" formControlName="lastname">
-              <mat-error>Last name is required</mat-error>
-            </mat-form-field>
-          </div>
-          <mat-form-field appearance="outline" class="UserName">
-            <mat-label>Username</mat-label>
-            <input matInput placeholder="" formControlName="email">
-            <mat-error>Email is required</mat-error>
-          </mat-form-field>
-          <div class="para">
-            <p>You can use letters , numbers & periods </p>
-          </div>
-          <div class="buttondiv">
-            <button class="divButton"><b style="padding: 2px;">Use my current email address instead</b></button>
-          </div>
-          <br>
-          <div class="nameDiv">
-            <mat-form-field appearance="outline" class="PasswordDiv">
-              <mat-label>Password</mat-label>
-              <input matInput placeholder="" formControlName="password">
-              <mat-error>Password is required</mat-error>
-            </mat-form-field>
-            <mat-form-field appearance="outline" class="Confirm">
-              <mat-label>Confirm</mat-label>
-              <input matInput placeholder="" formControlName="confirmPassword">
-              <mat-error>Confirm Password is required</mat-error>
-            </mat-form-field>
-          </div>
-          <div class="para">
-            <p>Use 8 or more characters with a mix of letters, numbers & symbols</p>
-          </div>
-          <div class="CheckBox">
-            <mat-checkbox class="check">Show password</mat-checkbox>
-          </div>
-          <div class="matButton">
-            <div class="loginButton">
-              <button class="login" routerLink="/login"><b>Sign in instead</b></button>
+            <mat-form-field appearance="outline" class="name">
+                <mat-label>First name</mat-label>
+                <input matInput placeholder="" formControlName="firstname">
+                <mat-error>First name is required</mat-error>
+              </mat-form-field>
+                <mat-form-field appearance="outline" class="namediv">
+                  <mat-label>Last name</mat-label>
+                  <input matInput placeholder="" formControlName="lastname">
+                  <mat-error>Last name is required</mat-error>
+                </mat-form-field>
             </div>
-            <div class="NextButton">
-              <button class="mat-raised-button" color="primary">Next</button>
+            <mat-form-field appearance="outline" class="username">
+              <mat-label>Username</mat-label>
+              <input matInput placeholder="" formControlName="email">
+              <mat-error>Email is required</mat-error>
+            </mat-form-field>
+            <div class="para">
+              <p>You can use letters , numbers & periods </p>
+            </div>
+            <div class="buttondiv">
+              <button class="divButton"><b style="padding: 2px;">Use my current email address instead</b></button>
+            </div>
+            <br>
+            <div class="nameDiv">
+              <mat-form-field appearance="outline" class="name">
+                <mat-label>Password</mat-label>
+                <input matInput placeholder="" formControlName="password">
+                <mat-error>Password is required</mat-error>
+              </mat-form-field>
+              <mat-form-field appearance="outline" class="namediv">
+                <mat-label>Confirm</mat-label>
+                <input matInput placeholder="" formControlName="confirmPassword">
+                <mat-error>Confirm Password is required</mat-error>
+              </mat-form-field>
+            </div>
+            <div class="para">
+              <p>Use 8 or more characters with a mix of letters, numbers & symbols</p>
+            </div>
+            <div class="CheckBox">
+              <mat-checkbox class="check">Show password</mat-checkbox>
+            </div>
+            <div class="matButton">
+                <button class="login" routerLink="/login"><b>Sign in instead</b></button>
+                <button class="mat-raised-button" color="primary">Next</button>
             </div>
           </div>
-        </div>
       </form>
       <div class="imageDiv">
         <div>

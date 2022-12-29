@@ -5,7 +5,7 @@
     border-radius: 12px;
     display: flex;
     flex-direction: column;
-    padding-top: 10px;
+    padding-top: 0px;
     padding-bottom: 10px;
     background-color: white;
     width: 750px;
@@ -15,7 +15,7 @@
 .title {
     min-height: 10px;
     padding: 10px 15px;
-    padding-top: 0px;
+    padding-top: 15px;
     padding-right: 289px;
     padding-bottom: 30px;
     padding-left: 15px;
@@ -45,17 +45,16 @@
     margin-top: 10px;
 }
   .note-field{
-    min-height: 27px;
-    padding: 10px 15px;
+    min-height: 25px;
     padding-top: 0px;
     padding-right: 300px;
     padding-bottom: 0px;
     padding-left: 15px;
-    height: 2px;
+    height: 0px;
     width: 420px;
     border: none;
     outline: none;
-    font: normal 16px Google Sans,Roboto,Helvetica,Arial,sans-serif;
+    font: normal 16px Google Sans,Roboto,Helvetica,Arial,sans-serif,bold;
   }
   .Icons {
     padding-left: 579px;

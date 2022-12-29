@@ -1,51 +1,53 @@
 <div class="OuterDiv">
-    <div class="FirstInnerDiv">
+    <div class="InnerDiv">
         <div class="funDo">
             <b class="F">F</b>
             <b class="u">u</b>
             <b class="n">n</b>
-            <b class="D">d</b>
+            <b class="D">D</b>
             <b class="o">o</b>
             <b class="oo">o</b>
         </div>
-        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-            <div class="sign-head">
-                <h1>Sign in</h1>
-            </div>
-            <div class="head-line">
-                <h3>Use your Fundoo Account</h3>
-            </div>
-            <div>
-                <mat-form-field appearance="outline" class="Email">
-                    <mat-label>Email</mat-label>
-                    <input matInput placeholder="" formControlName="email" >
-                    <mat-error>Email is required</mat-error>
-                </mat-form-field>
-            </div>
-            <div>
-                <mat-form-field appearance="outline" class="Password">
-                    <mat-label>Password</mat-label>
-                    <input matInput placeholder="" formControlName="password">
-                    <mat-error>Password is required</mat-error>
-                </mat-form-field>
-            </div>
-            <div class="buttondiv">
-                <button class="divButton" routerLink="/forgotPassword"><b style="padding: 2px;">Forgot
-                        Password?</b></button>
-            </div>
-            <div class="text" > Not your computer? Use Guest mode to sign in privately.<br>
-                <button class="Instead">
-                    <a href="https://support.google.com/chrome/answer/6130773?hl=en" >Learn more</a>
-                </button>
-            </div>
-            <div class="matButton">
-                <div class="CreateAccount">
-                    <button class="createAcc" routerLink="/register"><b>Create account</b></button>
+        <div>
+            <p class="span">Sign in</p>
+        </div>
+        <div style="font-size: 16px;">
+            <p> Use your FunDoo Account </p>
+        </div>
+        <div class="SecondInnerDiv">
+            
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                
+                <div>
+                    <mat-form-field appearance="outline" class="email">
+                        <mat-label>Email or phone</mat-label>
+                        <input matInput placeholder="Email or phone" formControlName="email">
+                        <mat-error>Couldn't find your Fundoo Account</mat-error>
+                    
+                    </mat-form-field>
                 </div>
-                <div class="NextButton">
-                    <button class="mat-raised-button" color="primary">Next</button>
+                <div>
+                    <mat-form-field appearance="outline" class="password">
+                        <mat-label>Password</mat-label>
+                        <input matInput placeholder="" formControlName="password">
+                        <mat-error>Enter valid Password</mat-error>
+                    </mat-form-field>
                 </div>
-            </div>
-        </form>
+
+                <button class="Forgot" routerLink="/forgotEmail"><b>Forgot Password?</b></button>
+
+                
+                <div> Not your computer? Use Guest mode to sign in privately.<br>
+                    <button class="register">
+                        <a href="https://support.google.com/chrome/answer/6130773?hl=en" >Learn more</a>
+                    </button>
+                </div>
+                <div class="matButton">
+                        <button class="register"><b routerLink="/register">Create account</b></button>
+                        <button class="mat-raised-button"> Next </button>
+                </div>
+            </form>
+        </div> 
     </div>
+
 </div>
