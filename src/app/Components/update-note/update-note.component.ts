@@ -32,7 +32,6 @@ export class UpdateNoteComponent implements OnInit {
       description : this.description,
       id : this.id
     }
-    console.log(this.data);
     this.noteService.updateNote(data).subscribe((response : any) =>{
       console.log(response)
     })

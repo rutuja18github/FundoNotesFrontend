@@ -23,8 +23,8 @@ constructor(public dialog: MatDialog) {}
     });
 
     dialogRef.afterClosed().subscribe(response => {
-      console.log('The dialog was closed',response);
-      
+      console.log('The dialog was closed');
+      this.displayNoteEvent.emit(response)
     });
   }
   receivedData(event: any) {
