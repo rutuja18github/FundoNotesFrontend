@@ -26,7 +26,7 @@ h1.example-app-name {
 .example-sidenav-container {
   /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
      causes `<mat-sidenav-content>` to act as our scrolling element for desktop layouts. */
-  flex: 1;
+  flex: 1 ;
 }
 
 .example-is-mobile .example-sidenav-container {
@@ -38,7 +38,7 @@ h1.example-app-name {
 .example-toolbar{
   display: flex;
   flex-direction: row;
-  align-content: space-around;
+  //align-content: space-around;
 }
 .search-container{
   display: flex;
@@ -57,11 +57,9 @@ h1.example-app-name {
   width: 500px;
   height: 42px;
   border: none;
-  background: transparent;
   font-size: 18px;
   box-sizing: border-box;
   outline: none;
-  font-variant-ligatures: none;
   background: transparent;
   border: none;
   font: normal 16px Google Sans,Roboto,Helvetica,Arial,sans-serif;
@@ -155,15 +153,18 @@ padding-right: 20px;
 height: 25px;
 }
 
-
-@media (min-width:360px) {
-.example-toolbar{
-width: 100%;
+@media only screen and (min-width:920px) {
+  .example-toolbar{
+    width: auto;
+    }
+    
+    .example-sidenav-container{
+    width: auto;
+    }
+  
 }
+@media only screen and (min-width:360px) {
 
-.example-sidenav-container{
-width: 100%;
-}
 } 
 .button{
   margin-left: 10px;

@@ -30,7 +30,8 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import { ArchiveNoteComponent } from './Components/archive-note/archive-note.component';
 import { TrashNoteComponent } from './Components/trash-note/trash-note.component';
-import {MatButtonModule} from '@angular/material/button'
+import {MatButtonModule} from '@angular/material/button';
+import { AuthguardService } from './services/AuthguardSevice/authguard.service';
 
 @NgModule({
   declarations: [
@@ -68,7 +69,9 @@ import {MatButtonModule} from '@angular/material/button'
     MatTooltipModule,
     MatButtonModule
   ],
-  providers: [],
+  providers: [
+    AuthguardService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

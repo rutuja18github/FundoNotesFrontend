@@ -10,13 +10,15 @@ import {IconComponent} from './Components/icon/icon.component';
 import { GetAllNoteComponent } from './Components/get-all-note/get-all-note.component';
 import {ArchiveNoteComponent} from './Components/archive-note/archive-note.component'
 import {TrashNoteComponent } from './Components/trash-note/trash-note.component'
+import { AuthenticationGuard} from './AuthGuard/authentication.guard'
 
 const routes: Routes = [
-  {path:'register',component:RegisterComponent},
+  {path:'', redirectTo:"/login",pathMatch:'full'},
   {path:'login',component:LoginComponent},
+  {path:'register',component:RegisterComponent},
   {path:'forgotPassword' ,component:ForgotPasswordComponent},
   {path:'resetPassword',component:ResetPasswordComponent},
-  {path:'dashboard',component:DashboardComponent,
+  {path:'dashboard',component:DashboardComponent ,canActivate:[AuthenticationGuard],
   children:[
     {path:'notes',component:GetAllNoteComponent},
     {path:'archive',component:ArchiveNoteComponent},
