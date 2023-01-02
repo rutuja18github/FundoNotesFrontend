@@ -4,7 +4,7 @@ import { BehaviorSubject } from 'rxjs'
   providedIn: 'root'
 })
 export class DataService {
-  private searchData=new BehaviorSubject('Default Data')
+  private searchData=new BehaviorSubject('')
   public searchNote=this.searchData.asObservable();
   constructor() { }
   sendMessage(message:any){

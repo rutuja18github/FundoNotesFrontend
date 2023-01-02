@@ -15,11 +15,11 @@ title: any;
 description: any;
 notes:any;
 constructor(public dialog: MatDialog,private dataService:DataService) {}
-Search='';
+search='';
 ngOnInit() {
-  this.dataService.searchNote.subscribe(result => {
-    console.log(result);
-  this.Search=result;
+  this.dataService.searchNote.subscribe(result =>{ 
+    this.search = result 
+    console.log(this.search)
   })
 }
 

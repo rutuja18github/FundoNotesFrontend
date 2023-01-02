@@ -32,7 +32,7 @@ import { ArchiveNoteComponent } from './Components/archive-note/archive-note.com
 import { TrashNoteComponent } from './Components/trash-note/trash-note.component';
 import {MatButtonModule} from '@angular/material/button';
 import { AuthguardService } from './services/AuthguardSevice/authguard.service';
-//import { SearchFilterPipe } from './Pipes/search-filter.pipe';
+import { SearchFilterPipe } from './Pipes/search-filter.pipe';
 
 @NgModule({
   declarations: [
@@ -49,7 +49,7 @@ import { AuthguardService } from './services/AuthguardSevice/authguard.service';
     UpdateNoteComponent,
     ArchiveNoteComponent,
     TrashNoteComponent,
-   // SearchFilterPipe,
+   SearchFilterPipe,
   ],
   imports: [
     BrowserModule,
