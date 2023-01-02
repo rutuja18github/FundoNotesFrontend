@@ -1,4 +1,13 @@
-
+.OuterDiv{
+  max-width: 100%;
+  min-width: 20%;
+  min-height: 30%;
+  max-height: 100%;
+  height: 100%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
 .example-container {
   display: flex;
   flex-direction: column;
@@ -15,9 +24,10 @@
   z-index: 2;
 }
 
-h1.example-app-name {
+h1{
   margin-left: 16px;
-  color: #5f6368;
+  margin-top: 15px;
+  color: #393a3d;
   opacity: 1;
   font-family: sans-serif;
 }
@@ -79,11 +89,6 @@ h1.example-app-name {
 
 }
 
-.refresh{
-  margin-right: 20px;
-  
-}
-
 .listV{
   margin-right: 30px;
 }
@@ -110,19 +115,12 @@ width: 600px;
 }
 
 .note{
-// display: flex;
-// flex-direction: row;
-// padding-left: 15px;
-// background-color: #feefc3;
 padding-left: 12px;
 padding-right: 20px;
 height: 25px;
 }
 
 .rem{
-// display: flex;
-// flex-direction: row;
-// padding-left: 15px;
 padding-left: 12px;
 padding-right: 20px;
 height: 25px;
@@ -130,18 +128,12 @@ height: 25px;
  
 
 .label{
-// display: flex;
-// flex-direction: row;
-// padding-left: 15px;
 padding-left: 12px;
 padding-right: 20px;
 height: 25px;
 }
 
 .arcv{
-// display: flex;
-// flex-direction: row;
-// padding-left: 15px;
 padding-left: 12px;
 padding-right: 20px;
 height: 25px;
@@ -152,8 +144,51 @@ padding-left: 12px;
 padding-right: 20px;
 height: 25px;
 }
+.icon-container{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-evenly;
+  padding-left: 320px;
+}
+.icon img{
+  height: 25px;
+  width: 25px;
+  margin-left:0px;
+}
+.searchBox {
+  margin-left: 100px;
+  width: 40%;
+  height: 73%;
+  border: 1px solid rgb(247, 242, 242);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: row;
+  //align-items: center;
+  background-color: rgb(228, 228, 228);
+}
+#textbox {
+  height: 70%;
+  width: 100%;
+  border: none;
+  outline: none;
+  padding-left: 20px;
+  background: transparent;
+}
 
-@media only screen and (min-width:920px) {
+@media only screen and (max-width:1245px) {
+    .icon-container{
+      padding-right: 0px;
+      padding-left: 0px;
+    }
+    .example-toolbar{
+      width: auto;
+      }
+      
+      .example-sidenav-container{
+      width: auto;
+      }
+}
+@media only screen and (max-width:920px) {
   .example-toolbar{
     width: auto;
     }
@@ -161,17 +196,10 @@ height: 25px;
     .example-sidenav-container{
     width: auto;
     }
-  
+    .icon-container{
+      padding-left: 0px;
+    }
 }
 @media only screen and (min-width:360px) {
 
 } 
-.button{
-  margin-left: 10px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  border: 0px;
-  background-color: transparent;
-  padding-left: 10px;
-}

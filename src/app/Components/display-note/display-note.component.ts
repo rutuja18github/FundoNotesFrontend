@@ -1,5 +1,6 @@
 import {Component,OnInit,Input,Output, EventEmitter} from '@angular/core';
 import {MatDialog} from '@angular/material/dialog';
+import { DataService } from 'src/app/services/DataService/data.service';
 import {UpdateNoteComponent} from '../update-note/update-note.component';
 
 @Component({
@@ -13,7 +14,14 @@ export class DisplayNoteComponent implements OnInit {
 title: any;
 description: any;
 notes:any;
-constructor(public dialog: MatDialog) {}
+constructor(public dialog: MatDialog,private dataService:DataService) {}
+Search='';
+ngOnInit() {
+  this.dataService.searchNote.subscribe(result => {
+    console.log(result);
+  this.Search=result;
+  })
+}
 
   openDialog(notes : any): void {
     const dialogRef = this.dialog.open(UpdateNoteComponent, {
@@ -30,9 +38,6 @@ constructor(public dialog: MatDialog) {}
   receivedData(event: any) {
     console.log(event);
     this.displayNoteEvent.emit(event)
-  }
-
-ngOnInit() {} 
-
+  } 
 
 }

@@ -5,7 +5,6 @@
     border-radius: 12px;
     display: flex;
     flex-direction: column;
-    padding-top: 0px;
     padding-bottom: 10px;
     background-color: white;
     width: 750px;
@@ -30,21 +29,7 @@
     display: flex;
     flex-direction: column-reverse;
 }
-.user{
-    font-size: small;
-    display: flex;
-    flex-direction: column-reverse;
-}
-.s-btn{
-    border: none;
-    background: transparent;
-    height: 100%;
-    margin-bottom: -22px;
-    margin-right: 30px;
-    margin-right: 20px;
-    margin-top: 10px;
-}
-  .note-field{
+.note-field{
     min-height: 25px;
     padding-top: 0px;
     padding-right: 300px;
@@ -56,7 +41,7 @@
     outline: none;
     font: normal 16px Google Sans,Roboto,Helvetica,Arial,sans-serif,bold;
   }
-  .Icons {
+.Icons {
     padding-left: 579px;
     opacity: 0.7;
     margin-bottom: -27px;
@@ -89,4 +74,14 @@
     border: none;
     background-color: white;
     cursor: pointer;
+}
+
+@media only screen and (max-width:920px) {
+    .createnotecontainer{
+        width: 680px;
+        margin-left: 100px;
+    }
+    .Icons {
+        padding-left: 500px;
+    }
 }

@@ -1,5 +1,4 @@
 <div class="display">
-
     <div class="notes" *ngFor="let data of noteList" [style.background]="data.color">
         <div class="title">
             <p (click)="openDialog(data)">{{data.title}}</p>
