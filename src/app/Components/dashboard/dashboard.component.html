@@ -11,12 +11,12 @@
             </div>
         
             <h1>Fundoo</h1>
-           
-            <div class="wholesearchbox">
-                <img style="margin-left: 10px; height: 30px;" src="../../../assets/search_FILL0_wght400_GRAD0_opsz48.svg">
-                <input class="inputSearchbox" type="search" (keyup)="searchNote($event)" placeholder="Search">
+           <div class="xyz">
+                <div class="wholesearchbox">
+                    <img style="margin-left: 10px; height: 30px;" src="../../../assets/search_FILL0_wght400_GRAD0_opsz48.svg">
+                    <input class="inputSearchbox" type="search" (keyup)="searchNote($event)" placeholder="Search">
+                </div>
             </div>
-
             <div class="icon-container">
                 <div class="icon">
                     <button mat-icon-button matTooltip="refresh"><img
@@ -29,13 +29,13 @@
                     <button mat-icon-button matTooltip="settings"><img
                             src="../../../assets/settings_FILL0_wght400_GRAD0_opsz48.svg"></button>
                 </div>
-                <div class="icon" style="padding-left: 30px;">
+                <div class="icon" style="padding-left: 30px;" >
                     <button mat-icon-button matTooltip="Fundoo apps" ><img
                             src="../../../assets/apps_FILL0_wght400_GRAD0_opsz48.svg"></button>
                 </div>
                 <div class="icon">
-                    <button mat-icon-button matTooltip="Fundoo account"><img
-                            src="../../../assets/person_add_FILL0_wght400_GRAD0_opsz48.svg"></button>
+                    <button mat-icon-button matTooltip="Fundoo account"  (click)="Logout()">
+                        <img src="../../../assets/person_add_FILL0_wght400_GRAD0_opsz48.svg"></button>
                 </div>
             </div>
         </mat-toolbar>

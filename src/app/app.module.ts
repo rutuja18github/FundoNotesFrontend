@@ -34,6 +34,7 @@ import {MatButtonModule} from '@angular/material/button';
 import { AuthguardService } from './services/AuthguardSevice/authguard.service';
 import { SearchFilterPipe } from './Pipes/search-filter.pipe';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -49,7 +50,7 @@ import { SearchFilterPipe } from './Pipes/search-filter.pipe';
     UpdateNoteComponent,
     ArchiveNoteComponent,
     TrashNoteComponent,
-   SearchFilterPipe,
+   SearchFilterPipe
   ],
   imports: [
     BrowserModule,

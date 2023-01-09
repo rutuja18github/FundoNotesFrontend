@@ -1,5 +1,6 @@
 import {MediaMatcher} from '@angular/cdk/layout';
 import {ChangeDetectorRef, Component, OnDestroy} from '@angular/core';
+import { Router } from '@angular/router';
 import { DataService } from 'src/app/services/DataService/data.service';
 
 @Component({
@@ -24,7 +25,7 @@ export class DashboardComponent implements OnDestroy {
 
   private _mobileQueryListener: () => void;
 
-  constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher,private dataService:DataService) {
+  constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher,private dataService:DataService,public router:Router ) {
     this.mobileQuery = media.matchMedia('(max-width: 600px)');
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
     this.mobileQuery.addListener(this._mobileQueryListener);
@@ -40,4 +41,10 @@ export class DashboardComponent implements OnDestroy {
     console.log(event.target.value)
     this.dataService.sendMessage(event.target.value);
   }
+  
+   Logout(){
+    localStorage.removeItem('token');
+    this.router.navigateByUrl("/login")
+    console.log("Logout Successfully..!!!");
+   }
 }
